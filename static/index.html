@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill Matcher</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/charts.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/quick-actions.css">
+    <link rel="stylesheet" href="/static/css/sections.css">
+    <link rel="stylesheet" href="/static/css/tabs.css">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="stylesheet" href="/static/css/upload.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+</head>
+<body data-color-scheme="light">
+    <div id="loading-overlay-placeholder"></div>
+    <div id="notification-container-placeholder"></div>
+    <div id="voice-placeholder"></div>
+    <div id="accessibility-placeholder"></div>
+        <!-- Accessibility Toolbar (top right) -->
+        <div class="accessibility-toolbar" style="position: absolute; top: 16px; right: 24px; display: flex; gap: 8px; z-index: 10;">
+                <button class="btn btn--sm" id="toggle-theme" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
+                <button class="btn btn--sm" id="increase-font" aria-label="Increase font size">A+</button>
+                <button class="btn btn--sm" id="decrease-font" aria-label="Decrease font size">A-</button>
+                <button class="btn btn--sm" id="voice-toggle" aria-label="Toggle voice input"><i class="fas fa-microphone"></i></button>
+        </div>
+
+            <!-- Navigation Bar (left-aligned, horizontal) -->
+            <nav class="navbar" role="navigation" aria-label="Main navigation" style="width: 100%; background: #fff; border-bottom: 1px solid #e5e7eb;">
+                <div class="navbar__content" style="display: flex; flex-direction: column; align-items: flex-start; padding: 12px 32px; gap: 8px;">
+                    <div class="navbar__brand" style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem; color: #1FB8CD;"><i class="fas fa-brain"></i></span>
+                        <span style="font-size: 1.2rem; font-weight: 600; color: #1FB8CD;">AI Skill Matcher Pro</span>
+                    </div>
+                    <div class="navbar__links" style="display: flex; align-items: center; gap: 12px; flex-wrap: nowrap;">
+                        <button class="nav-link active" data-section="landing"><i class="fas fa-home"></i> Home</button>
+                        <button class="nav-link" data-section="upload"><i class="fas fa-upload"></i> Upload</button>
+                        <button class="nav-link" data-section="dashboard"><i class="fas fa-chart-dashboard"></i> Dashboard</button>
+                        <button class="nav-link" data-section="roadmap"><i class="fas fa-route"></i> Roadmap</button>
+                        <button class="nav-link" data-section="interview"><i class="fas fa-comments"></i> Interview Prep</button>
+                        <button class="nav-link" data-section="collaboration"><i class="fas fa-users"></i> Collaborate</button>
+                        <button class="nav-link" data-section="profile"><i class="fas fa-user-cog"></i> Profile</button>
+                    </div>
+                </div>
+            </nav>
+    <div id="app" class="main-content">
+        <!-- Sections will be loaded here dynamically -->
+    </div>
+    <!-- JavaScript Files -->
+    <script>window.APP_BASE = '/static/';</script>
+    <script src="/static/js/loader.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

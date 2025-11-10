@@ -1,0 +1,19 @@
+.text-error {
+    color: var(--color-error) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-warning {
+    color: var(--color-warning) !important;
+}
+
+.text-info {
+    color: var(--color-info) !important;
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}

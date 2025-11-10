@@ -1,0 +1,220 @@
+/* Career Insights */
+.career-insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.insight-card {
+    background: var(--color-surface-2);
+    border-radius: var(--radius-md);
+    padding: var(--space-16);
+}
+
+.insight-card h4 {
+    margin: 0 0 var(--space-12);
+    color: var(--color-text);
+    font-size: var(--font-size-md);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.insight-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insight-card ul li {
+    margin-bottom: var(--space-8);
+    color: var(--color-text-secondary);
+    padding-left: var(--space-20);
+    position: relative;
+}
+
+.insight-card ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+.insight-card.growth {
+    border-left: 3px solid var(--color-success);
+}
+
+.insight-card.skills {
+    border-left: 3px solid var(--color-primary);
+}
+
+.insight-card.market {
+    border-left: 3px solid var(--color-warning);
+}
+
+/* Recommended Skills */
+.recommended-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+}
+
+.skill-tag.recommended {
+    background: var(--color-surface-3);
+    border: 1px solid var(--color-border);
+    padding: var(--space-6) var(--space-12);
+    border-radius: var(--radius-full);
+    position: relative;
+}
+
+.demand-indicator {
+    font-size: var(--font-size-xs);
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 2px var(--space-6);
+    border-radius: var(--radius-full);
+    margin-left: var(--space-6);
+}
+
+/* Market Trends */
+.trend-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+
+.trend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-12);
+}
+
+.trend-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    min-width: 100px;
+}
+
+.trend-bar {
+    flex-grow: 1;
+    height: 8px;
+    background: var(--color-surface);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.trend-fill {
+    height: 100%;
+    background: var(--color-primary);
+    border-radius: var(--radius-full);
+    transition: width var(--duration-normal) var(--ease-standard);
+}
+
+.trend-value {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    font-weight: var(--font-weight-medium);
+    min-width: 80px;
+    text-align: right;
+}
+
+/* Salary Insights Enhancements */
+.salary-insights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+}
+
+.salary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-16);
+    padding: var(--space-16) 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.stat-trend {
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-4);
+}
+
+.stat-trend.positive {
+    color: var(--color-success);
+}
+
+.stat-trend.negative {
+    color: var(--color-error);
+}
+
+.stat-context {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-4);
+}
+
+.salary-recommendations {
+    padding-top: var(--space-16);
+}
+
+.salary-recommendations h4 {
+    margin: 0 0 var(--space-12);
+    font-size: var(--font-size-md);
+}
+
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recommendation-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+    color: var(--color-text-secondary);
+}
+
+.recommendation-list li i {
+    color: var(--color-primary);
+    font-size: var(--font-size-md);
+}
+
+/* Enhanced Skill Tags */
+.skill-tag {
+    position: relative;
+    padding-right: var(--space-24);
+}
+
+.skill-confidence {
+    position: absolute;
+    right: var(--space-6);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--font-size-xs);
+    opacity: 0.8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .career-insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .salary-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .trend-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .trend-label,
+    .trend-value {
+        min-width: auto;
+    }
+}

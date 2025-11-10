@@ -1,0 +1,231 @@
+/* Upload Section Styles */
+.upload-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upload-subtitle {
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+}
+
+.role-selection {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.role-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.role-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg-1);
+}
+
+.role-btn.active {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.role-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    color: var(--color-text);
+}
+
+.tab-btn.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.upload-methods {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.upload-area {
+    flex: 1;
+    padding: 2rem;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover,
+.upload-area.dragover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.upload-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.upload-divider {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-secondary);
+}
+
+.upload-divider::before,
+.upload-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+    margin: 0 1rem;
+}
+
+.voice-upload-area {
+    flex: 1;
+    text-align: center;
+}
+
+.voice-btn {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.voice-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.voice-btn i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.voice-hint {
+    color: var(--color-text-secondary);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.upload-text-area {
+    margin-top: 2rem;
+}
+
+.textarea-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.text-stats {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.upload-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.upload-progress {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+}
+
+.step.active {
+    color: var(--color-primary);
+}
+
+.step i {
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,5 @@
+John Doe
+Senior Software Engineer
+Experience: Python, JavaScript, React, AWS, Docker
+Certifications: AWS Certified Solutions Architect
+Education: B.S. Computer Science

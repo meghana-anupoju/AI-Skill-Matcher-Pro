@@ -1,0 +1,95 @@
+/* Chart Controls */
+.chart-controls {
+    display: flex;
+    gap: var(--space-8);
+    align-items: center;
+}
+
+.form-control--sm {
+    font-size: var(--font-size-sm);
+    padding: var(--space-4) var(--space-8);
+    height: 32px;
+}
+
+/* Chart Container */
+.chart-container {
+    margin: var(--space-16) 0;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-16);
+}
+
+/* Salary Stats */
+.salary-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--space-16);
+    padding-top: var(--space-16);
+    border-top: 1px solid var(--color-border);
+}
+
+.salary-stats .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.salary-stats .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-4);
+}
+
+.salary-stats .stat-value {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+}
+
+/* Chart Legend */
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+/* Card Header with Title and Controls */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-16);
+}
+
+.card-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .salary-stats {
+        flex-direction: column;
+        gap: var(--space-16);
+    }
+    
+    .chart-container {
+        height: 250px !important;
+    }
+}

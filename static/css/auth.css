@@ -1,0 +1,18 @@
+/* Auth page styles with Light Teal Tint theme */
+:root{
+  --bg:#E6F8F6;--card:#ffffff;--muted:#6b7280;--accent:#4c51bf;--danger:#e53e3e;
+}
+body.auth-page{background:var(--bg);font-family:system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#111;margin:0;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.auth-page .brand{text-align:center;margin-bottom:2rem}
+.auth-page .brand h2{color:#2d3748;font-size:2rem;margin:0 0 0.5rem}
+.auth-page .brand p{color:var(--muted);font-size:1.1rem;margin:0 0 1rem}
+.auth-container{background:var(--card);padding:28px;border-radius:8px;box-shadow:0 6px 20px rgba(2,6,23,0.08);width:360px;max-width:92%}
+.auth-container h1{margin:0 0 12px;font-size:20px;color:var(--accent)}
+.auth-form{display:flex;flex-direction:column;gap:10px}
+.auth-form label{font-size:13px;color:var(--muted)}
+.auth-form input{padding:10px;border:1px solid #e6e9ef;border-radius:6px;font-size:15px}
+.auth-form .btn{background:var(--accent);color:#fff;border:none;padding:10px;border-radius:6px;cursor:pointer;font-weight:600}
+.muted{font-size:13px;color:var(--muted);margin-top:6px}
+.auth-message{margin-top:8px;font-size:13px}
+.auth-message.success{color:green}
+.auth-message.error{color:var(--danger)}

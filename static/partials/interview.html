@@ -1,0 +1,102 @@
+<!-- Interview Preparation Section -->
+<section id="interview" class="section">
+  <div class="container">
+    <div class="interview-header">
+      <h2><i class="fas fa-comments"></i> AI Interview Preparation</h2>
+      <p class="interview-subtitle">Practice with AI-generated questions tailored to your target role</p>
+    </div>
+
+    <div class="interview-content">
+      <!-- Setup Card -->
+      <div class="card interview-card">
+        <div class="card__body">
+          <h3><i class="fas fa-cog"></i> Interview Settings</h3>
+            <div class="form-group">
+              <label class="form-label">Target Role</label>
+              <select class="form-control" id="interview-role">
+                <option>Senior Software Engineer</option>
+                <option>Full Stack Developer</option>
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Interview Type</label>
+              <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="interview-type" value="technical" checked><span>Technical</span></label>
+                <label class="radio-item"><input type="radio" name="interview-type" value="behavioral"><span>Behavioral</span></label>
+                <label class="radio-item"><input type="radio" name="interview-type" value="mixed"><span>Mixed</span></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Difficulty Level</label>
+              <div class="difficulty-slider">
+                <input type="range" id="difficulty-range" min="1" max="5" value="3" class="slider">
+                <div class="slider-labels"><span>Easy</span><span>Medium</span><span>Hard</span></div>
+              </div>
+            </div>
+            <button class="btn btn--primary btn--full-width" id="start-interview"><i class="fas fa-play"></i> Start Interview Practice</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Card -->
+      <div class="card interview-card">
+        <div class="card__body">
+          <div class="question-header">
+            <h3><i class="fas fa-question-circle"></i> Question 1 of 10</h3>
+              <div class="question-meta"><span class="question-type">Technical</span><span class="question-difficulty">Medium</span></div>
+            </div>
+
+            <div class="question-content">
+              <div class="question-text">
+                <h4>Explain your experience with React hooks and how you would optimize a component that re-renders frequently.</h4>
+                <div class="question-hints">
+                  <button class="btn btn--sm btn--outline" id="show-hint"><i class="fas fa-lightbulb"></i> Show Hint</button>
+                  <div class="hint-content hidden"><p>Consider discussing useMemo, useCallback, and React.memo optimization techniques.</p></div>
+                </div>
+              </div>
+
+              <div class="answer-section">
+                <div class="answer-methods">
+                  <button class="method-btn active" data-method="text"><i class="fas fa-keyboard"></i> Type Answer</button>
+                  <button class="method-btn" data-method="voice"><i class="fas fa-microphone"></i> Voice Answer</button>
+                </div>
+
+                <div class="answer-input-text active"><textarea class="form-control" rows="8" placeholder="Type your answer here..."></textarea></div>
+                <div class="answer-input-voice">
+                  <div class="voice-recorder">
+                    <button class="voice-record-btn"><i class="fas fa-microphone"></i><span>Click to start recording</span></button>
+                    <div class="recording-status hidden"><div class="recording-indicator"><div class="recording-pulse"></div><span>Recording... <span id="recording-time">0:00</span></span></div></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="question-actions">
+              <button class="btn btn--outline" id="skip-question"><i class="fas fa-forward"></i> Skip Question</button>
+              <button class="btn btn--primary" id="submit-answer"><i class="fas fa-check"></i> Submit Answer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback Card -->
+      <div class="card interview-card">
+        <div class="card__body">
+          <h3><i class="fas fa-chart-bar"></i> AI Feedback & Analysis</h3>
+            <div class="feedback-content hidden" id="feedback-content">
+              <div class="feedback-score"><div class="score-circle"><span class="score-number">8.5</span><span class="score-max">/10</span></div><div class="score-details"><h4>Great Answer!</h4><p>Your response demonstrates strong technical knowledge</p></div></div>
+              <div class="feedback-breakdown">
+                <div class="feedback-section"><h4><i class="fas fa-thumbs-up"></i> Strengths</h4><ul><li>Clear explanation of React hooks</li><li>Good examples of optimization techniques</li><li>Mentioned performance considerations</li></ul></div>
+                <div class="feedback-section"><h4><i class="fas fa-arrow-up"></i> Areas for Improvement</h4><ul><li>Could elaborate more on useMemo vs useCallback</li><li>Consider discussing profiler tools</li></ul></div>
+                <div class="feedback-section"><h4><i class="fas fa-lightbulb"></i> Suggestions</h4><ul><li>Practice explaining with code examples</li><li>Review React DevTools profiler</li></ul></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

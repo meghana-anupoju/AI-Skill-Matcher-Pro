@@ -1,0 +1,269 @@
+<!-- Enhanced Dashboard Section -->
+<section id="dashboard" class="section">
+    <div class="container">
+        <div class="dashboard-header">
+            <div class="dashboard-title">
+                <h2><i class="fas fa-chart-dashboard"></i> AI Analysis Dashboard</h2>
+                <div class="dashboard-stats">
+                    <span class="stat-pill">Last updated: <span id="last-updated">Just now</span></span>
+                    <span class="stat-pill">Match confidence: 94%</span>
+                </div>
+            </div>
+            <div class="dashboard-actions">
+                <select class="form-control" id="match-filter">
+                    <option value="all">All Matches</option>
+                    <option value="high">High Match (80%+)</option>
+                    <option value="medium">Medium Match (60-79%)</option>
+                    <option value="low">Low Match (&lt;60%)</option>
+                </select>
+                <button class="btn btn--outline" id="export-report">
+                    <i class="fas fa-download"></i> Export Report
+                </button>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+            <!-- Overall Match Score -->
+            <div class="card dashboard-card highlight">
+                <div class="card__body">
+                    <div class="card-header">
+                        <h3><i class="fas fa-bullseye"></i> Overall Match Score</h3>
+                        <button class="btn btn--sm btn--outline" id="refresh-score">
+                            <i class="fas fa-sync"></i>
+                        </button>
+                    </div>
+                    <div class="match-score">
+                        <div class="score-circle">
+                            <span class="score-number" id="overallScore">92%</span>
+                            <div class="score-label" id="overallScoreLabel">Excellent Match</div>
+                        </div>
+                        <div class="score-details">
+                            <div class="score-breakdown">
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Technical Skills</span>
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" id="breakdown-tech" style="width: 92%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="breakdown-tech-val">92%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Soft Skills</span>
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" id="breakdown-soft" style="width: 78%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="breakdown-soft-val">78%</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="breakdown-label">Experience</span>
+                                    <div class="breakdown-bar">
+                                        <div class="breakdown-fill" id="breakdown-exp" style="width: 85%"></div>
+                                    </div>
+                                    <span class="breakdown-value" id="breakdown-exp-val">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Analysis Chart -->
+            <div class="card dashboard-card">
+                <div class="card__body">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-radar"></i> Skill Gap Analysis</h3>
+                        <div class="chart-controls">
+                            <button class="btn btn--sm btn--outline" data-chart="radar">Radar</button>
+                            <button class="btn btn--sm" data-chart="bar">Bar</button>
+                        </div>
+                    </div>
+                    <div class="chart-container" style="position: relative; height: 350px;">
+                        <canvas id="skillGapChart"></canvas>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #1FB8CD;"></div>
+                            <span>Your Skills</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #FFC185;"></div>
+                            <span>Job Requirements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Skill Detection -->
+            <div class="card dashboard-card">
+                <div class="card__body">
+                    <h3><i class="fas fa-brain"></i> AI-Detected Skills</h3>
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Technical Skills</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag expert">Python</span>
+                                <span class="skill-tag expert">JavaScript</span>
+                                <span class="skill-tag proficient">React</span>
+                                <span class="skill-tag proficient">Node.js</span>
+                                <span class="skill-tag intermediate">AWS</span>
+                                <span class="skill-tag intermediate">Docker</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-users"></i> Soft Skills</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag soft">Leadership</span>
+                                <span class="skill-tag soft">Communication</span>
+                                <span class="skill-tag soft">Problem Solving</span>
+                                <span class="skill-tag soft">Teamwork</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-lightbulb"></i> AI-Inferred Skills</h4>
+                            <div class="skills-grid">
+                                <span class="skill-tag inferred">Project Management</span>
+                                <span class="skill-tag inferred">Critical Thinking</span>
+                                <span class="skill-tag inferred">Agile Methodologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Market Salary Insights -->
+            <div class="card dashboard-card">
+                <div class="card__body">
+                    <h3><i class="fas fa-dollar-sign"></i> Salary Insights</h3>
+                    <div class="salary-chart-container">
+                        <div class="chart-container" style="position: relative; height: 200px;">
+                            <canvas id="salaryChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="salary-summary">
+                        <div class="salary-stat">
+                            <span class="salary-label">Market Average</span>
+                            <span class="salary-value">$95,000</span>
+                        </div>
+                        <div class="salary-stat">
+                            <span class="salary-label">Your Range</span>
+                            <span class="salary-value">$90K - $110K</span>
+                        </div>
+                        <div class="salary-stat">
+                            <span class="salary-label">Top 10%</span>
+                            <span class="salary-value">$130,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Job Matches -->
+            <div class="card dashboard-card full-width">
+                <div class="card__body">
+                    <h3><i class="fas fa-star"></i> Top Job Matches</h3>
+                    <div class="matches-grid">
+                        <div class="match-card featured">
+                            <div class="match-header">
+                                <div class="match-score-badge">94%</div>
+                                <div class="match-favorite">
+                                    <button class="favorite-btn">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="match-content">
+                                <h4>Senior Full Stack Engineer</h4>
+                                <div class="match-company">
+                                    <i class="fas fa-building"></i>
+                                    <span>TechCorp Inc.</span>
+                                </div>
+                                <div class="match-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>San Francisco, CA</span>
+                                </div>
+                                <div class="match-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$120K - $160K</span>
+                                </div>
+                                <div class="match-skills">
+                                    <span class="skill-tag match">Python</span>
+                                    <span class="skill-tag match">React</span>
+                                    <span class="skill-tag match">AWS</span>
+                                    <span class="skill-tag missing">GraphQL</span>
+                                </div>
+                                <div class="match-insights">
+                                    <div class="insight-item positive">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Strong Python experience</span>
+                                    </div>
+                                    <div class="insight-item neutral">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>Learn GraphQL to improve fit</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn--primary btn--sm">
+                                        <i class="fas fa-paper-plane"></i> Apply Now
+                                    </button>
+                                    <button class="btn btn--outline btn--sm">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                    <button class="btn btn--outline btn--sm">
+                                        <i class="fas fa-bookmark"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="match-card">
+                            <div class="match-header">
+                                <div class="match-score-badge">89%</div>
+                                <div class="match-favorite">
+                                    <button class="favorite-btn">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="match-content">
+                                <h4>Frontend Developer</h4>
+                                <div class="match-company">
+                                    <i class="fas fa-building"></i>
+                                    <span>StartupXYZ</span>
+                                </div>
+                                <div class="match-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Remote</span>
+                                </div>
+                                <div class="match-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <span>$90K - $120K</span>
+                                </div>
+                                <div class="match-skills">
+                                    <span class="skill-tag match">JavaScript</span>
+                                    <span class="skill-tag match">React</span>
+                                    <span class="skill-tag match">Node.js</span>
+                                    <span class="skill-tag partial">TypeScript</span>
+                                </div>
+                                <div class="match-insights">
+                                    <div class="insight-item positive">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Perfect React match</span>
+                                    </div>
+                                </div>
+                                <div class="match-actions">
+                                    <button class="btn btn--primary btn--sm">
+                                        <i class="fas fa-paper-plane"></i> Apply Now
+                                    </button>
+                                    <button class="btn btn--outline btn--sm">
+                                        <i class="fas fa-eye"></i> View Details
+                                    </button>
+                                    <button class="btn btn--outline btn--sm">
+                                        <i class="fas fa-bookmark"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

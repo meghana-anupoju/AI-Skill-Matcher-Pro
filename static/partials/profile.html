@@ -1,0 +1,279 @@
+<!-- Enhanced Profile Section -->
+<section id="profile" class="section">
+  <div class="container">
+    <div class="profile-header">
+      <h2><i class="fas fa-user-cog"></i> Profile & Integrations</h2>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-sidebar">
+        <div class="card"><div class="card__body">
+          <div class="profile-avatar-section"><div class="avatar-circle"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E" alt="Profile" /></div><button class="btn btn--sm btn--outline"><i class="fas fa-camera"></i> Change Photo</button></div>
+          <div class="profile-info"><h3>Meghana Anupoju</h3><p>Senior Software Engineer</p><div class="profile-completion"><div class="completion-bar"><div class="completion-fill" style="width: 87%;"></div></div><span>87% Profile Complete</span></div></div>
+          <div class="profile-stats"><div class="stat-grid"><div class="stat-item"><span class="stat-value">12</span><span class="stat-label">Job Matches</span></div><div class="stat-item"><span class="stat-value">94%</span><span class="stat-label">Top Match</span></div><div class="stat-item"><span class="stat-value">8</span><span class="stat-label">Skills</span></div><div class="stat-item"><span class="stat-value">3</span><span class="stat-label">Interviews</span></div></div></div>
+        </div></div>
+      </div>
+
+      <div class="profile-main">
+                <div class="settings-tabs" role="tablist" aria-label="Profile settings tabs">
+                    <button class="tab-btn active" data-tab="integrations" role="tab" aria-controls="integrations-tab"><i class="fas fa-link"></i> Platform Integrations</button>
+          <button class="tab-btn" data-tab="privacy"><i class="fas fa-shield-alt"></i> Privacy</button>
+          <button class="tab-btn" data-tab="accessibility"><i class="fas fa-universal-access"></i> Accessibility</button>
+          <button class="tab-btn" data-tab="quick-actions"><i class="fas fa-bolt"></i> Quick Actions</button>
+          <button class="tab-btn" data-tab="api"><i class="fas fa-code"></i> API & Export</button>
+        </div>
+
+        <div id="integrations-tab" class="tab-content active">
+          <div class="card"><div class="card__body">
+            <h3><i class="fas fa-plug"></i> Platform Integrations</h3>
+            <p class="integration-description">Connect your professional profiles for enhanced AI analysis and automatic skill detection.</p>
+            <div class="integration-list">
+              <div class="integration-item connected"><div class="integration-info"><div class="integration-icon linkedin"><i class="fab fa-linkedin"></i></div><div class="integration-details"><h4>LinkedIn</h4><p>Sync professional profile, connections, and experience</p><div class="integration-stats"><span class="stat">Last sync: 2 hours ago</span><span class="stat">500+ connections imported</span></div></div></div><div class="integration-actions"><div class="connection-status"><i class="fas fa-check-circle"></i><span>Connected</span></div><button class="btn btn--sm btn--outline"><i class="fas fa-sync"></i> Sync Now</button><button class="btn btn--sm btn--outline text-error"><i class="fas fa-unlink"></i> Disconnect</button></div></div>
+              <div class="integration-item connected"><div class="integration-info"><div class="integration-icon github"><i class="fab fa-github"></i></div><div class="integration-details"><h4>GitHub</h4><p>Import repositories, coding activity, and technology stack</p><div class="integration-stats"><span class="stat">15 repositories analyzed</span><span class="stat">245 contributions this year</span></div></div></div><div class="integration-actions"><div class="connection-status"><i class="fas fa-check-circle"></i><span>Connected</span></div><button class="btn btn--sm btn--outline"><i class="fas fa-sync"></i> Sync Now</button><button class="btn btn--sm btn--outline text-error"><i class="fas fa-unlink"></i> Disconnect</button></div></div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- Privacy Controls Tab -->
+        <div id="privacy-tab" class="tab-content">
+            <div class="card">
+                <div class="card__body">
+                    <h3><i class="fas fa-shield-alt"></i> Privacy Controls</h3>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Profile Visibility</h4>
+                                <p>Control who can see your profile and matching information</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-control">
+                                    <option>Public - Anyone can view</option>
+                                    <option selected>Recruiters Only - Verified recruiters</option>
+                                    <option>Private - No one can view</option>
+                                    <option>Custom - Select specific companies</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Contact Information</h4>
+                                <p>Who can see and contact you directly</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-control">
+                                    <option>Connected Users Only</option>
+                                    <option selected>Verified Recruiters</option>
+                                    <option>Premium Members</option>
+                                    <option>No One</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>AI Data Usage</h4>
+                                <p>How your data is used to improve AI matching algorithms</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Career Analytics Sharing</h4>
+                                <p>Share anonymized career data to improve industry insights</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accessibility Settings Tab -->
+        <div id="accessibility-tab" class="tab-content">
+            <div class="card">
+                <div class="card__body">
+                    <h3><i class="fas fa-universal-access"></i> Accessibility Settings</h3>
+                    <div class="settings-group">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>High Contrast Mode</h4>
+                                <p>Enhance text and interface contrast for better visibility</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" id="high-contrast-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Voice Input</h4>
+                                <p>Enable speech-to-text for hands-free interaction</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" checked id="voice-input-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Screen Reader Optimization</h4>
+                                <p>Optimize interface for screen reading software</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" id="screen-reader-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Font Size Preference</h4>
+                                <p>Adjust text size for comfortable reading</p>
+                            </div>
+                            <div class="setting-control">
+                                <select class="form-control" id="font-size-select">
+                                    <option value="small">Small</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extra-large">Extra Large</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Motion Preferences</h4>
+                                <p>Reduce animations and motion effects</p>
+                            </div>
+                            <div class="setting-control">
+                                <label class="toggle">
+                                    <input type="checkbox" id="reduced-motion-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions Tab -->
+        <div id="quick-actions-tab" class="tab-content">
+            <div class="card">
+                <div class="card__body">
+                    <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                    <div class="quick-actions-grid">
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-file-export"></i>
+                                <span>Export Resume</span>
+                                <p>Download your resume in various formats</p>
+                            </button>
+                        </div>
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-share-alt"></i>
+                                <span>Share Profile</span>
+                                <p>Share your profile with recruiters</p>
+                            </button>
+                        </div>
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-sync"></i>
+                                <span>Update Skills</span>
+                                <p>Refresh your skill assessments</p>
+                            </button>
+                        </div>
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-user-shield"></i>
+                                <span>Privacy Check</span>
+                                <p>Review your privacy settings</p>
+                            </button>
+                        </div>
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-certificate"></i>
+                                <span>Get Certified</span>
+                                <p>Explore certification options</p>
+                            </button>
+                        </div>
+                        <div class="action-card">
+                            <button class="action-btn-large">
+                                <i class="fas fa-chart-line"></i>
+                                <span>View Analytics</span>
+                                <p>Check your profile performance</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API & Data Export Tab -->
+        <div id="api-tab" class="tab-content">
+            <div class="card">
+                <div class="card__body">
+                    <h3><i class="fas fa-code"></i> API Access & Data Export</h3>
+                    <div class="api-section">
+                        <h4>API Keys</h4>
+                        <p>Generate API keys to integrate with external applications</p>
+                        <div class="api-keys">
+                            <div class="api-key-item">
+                                <div class="api-key-info">
+                                    <span class="api-key-name">Personal API Key</span>
+                                    <code class="api-key-value">sk-1234...abcd</code>
+                                </div>
+                                <button class="btn btn--sm btn--outline">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                        <button class="btn btn--outline">
+                            <i class="fas fa-plus"></i> Generate New Key
+                        </button>
+                    </div>
+
+                    <div class="export-section">
+                        <h4>Data Export</h4>
+                        <p>Download your profile data and AI analysis results</p>
+                        <div class="export-options">
+                            <button class="btn btn--outline">
+                                <i class="fas fa-file-pdf"></i> Export as PDF
+                            </button>
+                            <button class="btn btn--outline">
+                                <i class="fas fa-file-csv"></i> Export as CSV
+                            </button>
+                            <button class="btn btn--outline">
+                                <i class="fas fa-code"></i> Export as JSON
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 

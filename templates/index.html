@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Skill Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/text.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard-modern.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>window.APP_BASE = "{{ url_for('static', filename='') }}";</script>
+</head>
+<body data-color-scheme="light">
+    <div id="loading-overlay-placeholder"></div>
+    <div id="notification-container-placeholder"></div>
+    <div id="voice-placeholder"></div>
+    <div id="accessibility-placeholder"></div>
+    <nav id="nav-placeholder"></nav>
+    <div id="app" class="main-content">
+        <!-- Dynamic sections will be loaded here by loader.js and app.js -->
+    </div>
+
+    <script src="{{ url_for('static', filename='js/loader.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard-modern.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

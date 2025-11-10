@@ -1,0 +1,65 @@
+/* Tab Navigation */
+.settings-tabs {
+    display: flex;
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-8);
+}
+
+.tab-btn {
+    padding: var(--space-8) var(--space-16);
+    border: none;
+    background: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.tab-btn:hover {
+    color: var(--color-text);
+}
+
+.tab-btn.active {
+    color: var(--color-primary);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Animation for tab switching */
+.fade-in {
+    animation: fadeIn var(--duration-normal) var(--ease-standard);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

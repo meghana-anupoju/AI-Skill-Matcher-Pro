@@ -1,0 +1,253 @@
+/* Dashboard Layout */
+.dashboard {
+    padding: var(--space-24) 0;
+}
+
+.dashboard-header {
+    margin-bottom: var(--space-32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-title h2 {
+    margin: 0;
+    font-size: var(--font-size-2xl);
+    color: var(--color-text);
+}
+
+.dashboard-subtitle {
+    margin: var(--space-8) 0 0;
+    color: var(--color-text-secondary);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-24);
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: var(--space-16) var(--space-24);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-8);
+}
+
+.card-header h3 i {
+    color: var(--color-primary);
+}
+
+.card-body {
+    padding: var(--space-24);
+}
+
+/* Score Card */
+.score-card {
+    grid-column: span 2;
+}
+
+.score-circle {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    margin: 0 auto var(--space-24);
+}
+
+.score-chart {
+    width: 100%;
+    height: 100%;
+}
+
+.score-circle-bg {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 2.8;
+}
+
+.score-circle-fill {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease;
+}
+
+.score-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--font-size-3xl);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.score-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-16);
+    text-align: center;
+}
+
+.score-stat {
+    padding: var(--space-16);
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+}
+
+.score-stat .label {
+    display: block;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.score-stat .value {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* Skills Card */
+.skills-container {
+    display: grid;
+    gap: var(--space-24);
+}
+
+.skills-section h4 {
+    margin: 0 0 var(--space-16);
+    color: var(--color-text);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+}
+
+.skill-tag {
+    padding: var(--space-6) var(--space-12);
+    background: var(--color-background);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.skill-tag i {
+    color: var(--color-primary);
+    font-size: var(--font-size-xs);
+}
+
+/* Salary Card */
+.salary-overview {
+    display: grid;
+    gap: var(--space-24);
+}
+
+.salary-chart-container {
+    height: 300px;
+    position: relative;
+}
+
+.salary-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-16);
+}
+
+.stat {
+    text-align: center;
+    padding: var(--space-16);
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+}
+
+.stat-label {
+    display: block;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    font-size: var(--font-size-sm);
+}
+
+.stat-value {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* Job Matches Card */
+.job-matches {
+    display: grid;
+    gap: var(--space-16);
+}
+
+.job-match-item {
+    padding: var(--space-16);
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    display: grid;
+    gap: var(--space-8);
+}
+
+.job-title {
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.job-company {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.job-match-score {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.matches-footer {
+    margin-top: var(--space-24);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .score-card {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .salary-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        gap: var(--space-16);
+        text-align: center;
+    }
+}

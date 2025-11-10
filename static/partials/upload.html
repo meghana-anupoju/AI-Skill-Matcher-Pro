@@ -1,0 +1,163 @@
+<!-- Upload Section -->
+<section id="upload" class="section">
+  <div class="container">
+    <div class="upload-container">
+      <div class="upload-header">
+        <h2><i class="fas fa-cloud-upload-alt"></i> Upload & Analyze</h2>
+        <p class="upload-subtitle">Upload your resume or job description. Use voice input for hands-free experience.</p>
+      </div>
+
+      <!-- Role Selection -->
+      <div class="role-selection">
+        <h3>I am a:</h3>
+        <div class="role-buttons">
+          <button class="role-btn active" data-role="candidate">
+            <i class="fas fa-user-tie"></i>
+            <span>Job Candidate</span>
+          </button>
+          <button class="role-btn" data-role="recruiter">
+            <i class="fas fa-handshake"></i>
+            <span>Recruiter</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="upload-options">
+        <div class="upload-tabs">
+          <button class="tab-btn active" data-tab="resume" role="tab">
+            <i class="fas fa-file-alt"></i> Resume Upload
+          </button>
+          <button class="tab-btn" data-tab="job" role="tab">
+            <i class="fas fa-briefcase"></i> Job Description
+          </button>
+        </div>
+
+        <div id="resume-tab" class="tab-content active" role="tabpanel">
+          <div class="upload-methods">
+            <div class="upload-area" id="resume-upload">
+              <div class="upload-icon">📄</div>
+              <h4>Drop Resume Here</h4>
+              <p>Supports PDF and TXT files up to 10MB</p>
+              <input type="file" id="resume-file" accept=".pdf,.doc,.docx" hidden>
+              <button class="btn btn--outline">
+                <i class="fas fa-folder-open"></i> Browse Files
+              </button>
+              <div id="uploaded-file-info" class="uploaded-file-info muted" style="margin-top:8px; font-size:0.95rem;">No file uploaded</div>
+            </div>
+
+            <div class="upload-divider">
+              <span>OR</span>
+            </div>
+
+            <div class="voice-upload-area">
+              <button class="voice-btn" id="voice-resume-btn">
+                <i class="fas fa-microphone"></i>
+                <span>Speak Your Resume</span>
+              </button>
+              <p class="voice-hint">Click and speak your professional experience</p>
+            </div>
+          </div>
+
+          <div class="upload-text-area">
+            <div class="textarea-header">
+              <label for="resume-text" class="form-label">
+                <i class="fas fa-edit"></i> Or paste your resume text:
+              </label>
+              <button class="btn btn--sm btn--outline" id="clear-resume-text">
+                <i class="fas fa-trash"></i> Clear
+              </button>
+            </div>
+            <textarea id="resume-text" class="form-control" rows="10" placeholder="Paste your resume content here or use voice input above..."></textarea>
+            <div class="text-stats">
+              <span class="word-count">0 words</span>
+              <span class="char-count">0 characters</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="job-tab" class="tab-content" role="tabpanel">
+          <div class="upload-methods">
+            <div class="upload-area" id="job-upload">
+              <div class="upload-icon">💼</div>
+              <h4>Drop Job Description</h4>
+              <p>Supports PDF and TXT files up to 10MB</p>
+              <input type="file" id="job-file" accept=".pdf,.doc,.docx,.txt" hidden>
+              <button class="btn btn--outline">
+                <i class="fas fa-folder-open"></i> Browse Files
+              </button>
+            </div>
+
+            <div class="upload-divider">
+              <span>OR</span>
+            </div>
+
+            <div class="voice-upload-area">
+              <button class="voice-btn" id="voice-job-btn">
+                <i class="fas fa-microphone"></i>
+                <span>Speak Job Requirements</span>
+              </button>
+              <p class="voice-hint">Click and describe the job requirements</p>
+            </div>
+          </div>
+
+          <div class="upload-text-area">
+            <div class="textarea-header">
+              <label for="job-text" class="form-label">
+                <i class="fas fa-edit"></i> Or paste job description:
+              </label>
+              <button class="btn btn--sm btn--outline" id="clear-job-text">
+                <i class="fas fa-trash"></i> Clear
+              </button>
+            </div>
+            <textarea id="job-text" class="form-control" rows="10" placeholder="Paste job description here or use voice input above..."></textarea>
+            <div class="text-stats">
+              <span class="word-count">0 words</span>
+              <span class="char-count">0 characters</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="upload-actions">
+        <button class="btn btn--primary btn--lg" id="analyze-btn" disabled>
+          <i class="fas fa-magic"></i> Analyze with AI
+        </button>
+        <button class="btn btn--primary btn--lg" id="analyze-uploaded-btn" title="Analyze the resume you just uploaded" style="margin-left:12px;">
+          <i class="fas fa-file-medical"></i> Analyze Uploaded Resume
+        </button>
+        <button class="btn btn--outline btn--lg" id="save-draft-btn" disabled>
+          <i class="fas fa-save"></i> Save Draft
+        </button>
+      </div>
+
+      <!-- Upload Progress -->
+      <div class="upload-progress hidden" id="upload-progress">
+        <div class="progress-header">
+          <h4><i class="fas fa-cog fa-spin"></i> AI Analysis in Progress</h4>
+          <span class="progress-percentage">0%</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
+        </div>
+        <div class="progress-steps">
+          <div class="step active">
+            <i class="fas fa-file-upload"></i>
+            <span>Upload Complete</span>
+          </div>
+          <div class="step">
+            <i class="fas fa-search"></i>
+            <span>Extracting Skills</span>
+          </div>
+          <div class="step">
+            <i class="fas fa-brain"></i>
+            <span>AI Analysis</span>
+          </div>
+          <div class="step">
+            <i class="fas fa-chart-line"></i>
+            <span>Generating Insights</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
